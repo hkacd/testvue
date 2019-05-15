@@ -1,0 +1,18 @@
+<html><head><script src="https://cdn.jsdelivr.net/npm/vue"></script></head><body>
+
+<form name="FM1"><input id="t1"></form>
+<button onclick="E_BT()">ëóêM</button>
+<p id="i1"></p>
+
+<script>
+E1=document.getElementById("i1");
+for(let id=0;id<8;id++){E1.innerHTML+="{{d["+id+"]}}<br>";}
+V1=new Vue({el:"#i1",data:{d:new Array(8).fill("Åc")}});
+
+function E_BT(){
+  V1.d.unshift(FM1.t1.value);
+  V1.d.pop();
+  FM1.t1.value="";
+}
+
+</script></body></html>

@@ -1,0 +1,14 @@
+<html><head><script src="https://cdn.jsdelivr.net/npm/vue"></script></head><body>
+
+<form name="FM1"><input id="t1"></form>
+<button onclick="E_BT()">‘—M</button>
+<p id="i1">{{d1}}</p>
+
+<script>
+V1=new Vue({el:"#i1",data:{d1:""}});
+function E_BT(){
+  V1.d1=FM1.t1.value;
+  FM1.t1.value="";
+}
+
+</script></body></html>
