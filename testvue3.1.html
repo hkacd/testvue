@@ -1,0 +1,19 @@
+<html><head><script src="https://cdn.jsdelivr.net/npm/vue"></script></head><body>
+
+<input id="i2" autocomplete="off">
+<button onclick="E_BT()">submit</button>
+<p id="i1"></p>
+
+<script>
+E1=document.getElementById("i1");
+E2=document.getElementById("i2");
+for(let id=0;id<8;id++){E1.innerHTML+="{{d["+id+"]}}<br>";}
+V1=new Vue({el:"#i1",data:{d:new Array(8).fill("---")}});
+
+function E_BT(){
+  V1.d.pop();
+  V1.d.unshift(E2.value);
+  E2.value="";
+}
+
+</script></body></html>
